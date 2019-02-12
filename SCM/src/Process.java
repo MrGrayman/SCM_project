@@ -6,16 +6,12 @@ public class Process {
 		this.product = input.getProduct();
 	}
 	public double calculate(){
-		double compensation;
 		if(this.product>0&&this.product<=50000)
-			compensation = this.product*0.05;
+			return this.salary+(this.product*0.05);
+		else if(this.salary<15000&&this.product>100000)
+			return this.salary+(this.product*0.1)+5000;
 		else 
-			compensation = this.product*0.1;
-		if(this.product>0&&compensation < 20000)
-			compensation = 20000;
-		
-		return this.salary+compensation;
-		
-			
+			return this.salary+(this.product*0.1);
 	}
+
 }
