@@ -6,7 +6,7 @@ public class Process {
 		this.product = input.getProduct();
 	}
 	public double calculate(){
-		if(this.product<=50000)
+		if(this.product>0&&this.product<=100000)
 			return this.salary+(this.product*0.05);
 		else 
 			return this.salary+(this.product*0.1);
